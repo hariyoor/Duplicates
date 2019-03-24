@@ -14,7 +14,8 @@ public class Main {
 		while(!response.contentEquals("exit")) {
 			
 			
-			String[] responseComponents = response.split(" ");
+			String[] responseComponents = response.split(" ", 2);
+			responseComponents[1] = responseComponents[1].replaceAll(" ", "");
 			
 			if(responseComponents[0].contentEquals("add")) {
 				char[] charactersToAdd = responseComponents[1].toCharArray();
