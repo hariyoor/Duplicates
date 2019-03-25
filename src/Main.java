@@ -34,8 +34,10 @@ public class Main {
 				int index = Integer.parseInt(responseComponents[1]);
 				characterlist.report(index-1);
 			}
-			characterlist.currentCharacters();
-			System.out.println();
+			//characterlist.currentCharacters();
+			//System.out.println();
+			//characterlist.currentHistories();
+			//System.out.println();
 			System.out.println("Enter command: ");
 			
 			response = scanner.nextLine();
