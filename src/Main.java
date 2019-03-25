@@ -17,20 +17,20 @@ public class Main {
 			String[] responseComponents = response.split(" ", 2);
 			responseComponents[1] = responseComponents[1].replaceAll(" ", "");
 			
-			if(responseComponents[0].contentEquals("add")) {
+			if(responseComponents[0].contentEquals("ADD")) {
 				char[] charactersToAdd = responseComponents[1].toCharArray();
 				for(char c : charactersToAdd) {
-					characterlist.add(c);
+					characterlist.add(Character.toUpperCase(c));
 				}
-			} else if (responseComponents[0].contentEquals("reset")) {
+			} else if (responseComponents[0].contentEquals("RESET")) {
 				char[] charactersToAdd = responseComponents[1].toCharArray();
 				characterlist.reset(charactersToAdd);
-			} else if (responseComponents[0].contentEquals("delete")) {
+			} else if (responseComponents[0].contentEquals("DELETE")) {
 				char[] charactersToDelete = responseComponents[1].toCharArray();
 				for(char c : charactersToDelete) {
-					characterlist.delete(c);
+					characterlist.delete(Character.toUpperCase(c));
 				}
-			} else if (responseComponents[0].contentEquals("report")) {
+			} else if (responseComponents[0].contentEquals("REPORT")) {
 				int index = Integer.parseInt(responseComponents[1]);
 				characterlist.report(index-1);
 			}

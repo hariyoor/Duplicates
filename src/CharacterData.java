@@ -35,7 +35,7 @@ public class CharacterData {
 		characters = new TreeMap<Character, Integer>();
 		histories = new ArrayList<ArrayList<Character>>();
 		for(char c : input) {
-			this.add(c);
+			this.add(Character.toUpperCase(c));
 		}
 	}
 
